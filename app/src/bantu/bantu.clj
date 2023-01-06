@@ -10,7 +10,7 @@
   (render-file "root.html" (merge {:title "bantu" :render-main main} opts)))
 
 (defn connect-anki []
-  (let [anki-response (try (anki/connect) (catch Exception _ nil))]
+  (let [anki-response (try (anki/connect) (catch Exception e (println "[anki]" (.getMessage e)) nil))] 
     (if anki-response
       (render-file "connect-success.html" {:anki-connect-ver (:body anki-response)})
       (render-file "connect-failed.html" {}))))
