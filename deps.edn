@@ -7,6 +7,8 @@
         markdown-clj/markdown-clj {:mvn/version "1.11.4"}
         cheshire/cheshire {:mvn/version "5.11.0"}}
  :aliases {:panas {:extra-paths ["devtool"]
-                   :extra-deps {babashka/babashka.pods {:mvn/version "0.2.0"}}
+                   :extra-deps {babashka/babashka.pods {:mvn/version "0.2.0"}
+                                org.clojure/tools.namespace {:mvn/version "1.3.0"}}
                    :main-opts ["-m" "panas.reload"]}
-           :serve {:main-opts ["-m" "serve"]}}}
+           :serve {:extra-paths ["main"]
+                   :main-opts ["-m" "serve"]}}}
