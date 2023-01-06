@@ -9,7 +9,7 @@
 <body class="flex flex-row">
     <div id="wrapper" class="h-fit grid grid-cols-[6rem_auto]">
         <div id="header" class="col-span-2 px-5 pt-4 pb-2 bg-slate-300">
-            <a href="/" class="text-xl">bantu</a>
+            <a href="/" class="text-xl">{{title}}</a>
         </div>
         <aside id="sidebar" class="px-4 py-2">
             <div hx-sync="this:replace" _="on htmx:afterOnLoad take .selected-sidebar for event.target">
