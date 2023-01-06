@@ -1,0 +1,9 @@
+{:paths ["app/src" "app/html" "resources" "devtool"]
+ :deps {org.clojure/clojure {:mvn/version "1.11.1"}
+        info.sunng/ring-jetty9-adapter {:mvn/version "0.18.3"}
+        clj-http/clj-http {:mvn/version "3.12.3"}
+        org.clojure/core.match {:mvn/version "1.0.1"}
+        selmer/selmer {:mvn/version "1.12.55"}
+        markdown-clj/markdown-clj {:mvn/version "1.11.4"}
+        cheshire/cheshire {:mvn/version "5.11.0"}}
+ :aliases {:serve {:main-opts ["-m" "serve"]}}}

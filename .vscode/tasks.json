@@ -1,0 +1,22 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "watch server",
+            "type": "shell",
+            "command": "clj -M:panas",
+            "problemMatcher": []
+        },
+        {
+            "label": "tailwind",
+            "type": "shell",
+            "command": "./tailwindcss -i ./app/tailwind.css -o ./resources/public/css/style.css --watch",
+            "problemMatcher": []
+        },
+        {
+            "label": "start dev",
+            "dependsOn":["tailwind", "watch server"],
+            "problemMatcher": []
+        }
+    ]
+}

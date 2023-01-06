@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.sidebar-indicator {
+    opacity: 0;
+    transition: opacity 100ms ease-in;
+    pointer-events: none;
+    cursor: default;
+}
+
+.htmx-request .sidebar-indicator {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+}
+
+.htmx-request.sidebar-indicator {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+}
+
+@layer base {
+
+    input[type='number']::-webkit-outer-spin-button,
+    input[type='number']::-webkit-inner-spin-button,
+    input[type='number'] {
+        -webkit-appearance: none;
+        -moz-appearance: textfield !important;
+    }
+}
+
+@layer components {
+    .selected-sidebar {
+        @apply bg-emerald-100
+    }
+}

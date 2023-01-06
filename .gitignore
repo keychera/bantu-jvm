@@ -1,0 +1,7 @@
+.lsp
+.clj-kondo
+.calva
+.cpcache
+tailwindcss*
+
+.DS_Store

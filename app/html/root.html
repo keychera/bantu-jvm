@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <link href="/css/style.css" rel="stylesheet">
+    <script src="https://unpkg.com/htmx.org@1.8.4"></script>
+    <script src="https://unpkg.com/hyperscript.org@0.9.7"></script>
+</head>
+
+<body class="flex flex-row">
+    <div id="wrapper" class="h-fit grid grid-cols-[6rem_auto]">
+        <div id="header" class="col-span-2 px-5 pt-4 pb-2 bg-slate-300">
+            <a href="/" class="text-xl">bantu</a>
+        </div>
+        <aside id="sidebar" class="px-4 py-2">
+            <div hx-sync="this:replace" _="on htmx:afterOnLoad take .selected-sidebar for event.target">
+                {{render-sidebars|safe}}
+            </div>
+        </aside>
+        <div id="main" class="p-5 h-screen w-screen bg-gray-100">
+            {% if render-main %} {{render-main|safe}}
+            {% else %} {% include "landing.html" %}
+            {% endif %}
+        </div>
+    </div>
+</body>
+
+</html>
